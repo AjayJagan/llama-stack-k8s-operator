@@ -2,11 +2,12 @@ name: Disconnected Readiness
 on:
   pull_request:
     branches:
-      - main
-      - master
+    - main
+    - master
 
 jobs:
   check:
     uses: AjayJagan/disconnected-readiness-scorer/.github/workflows/reusable-check.yml@main
     with:
       rules: "csv,tags,egress,manifest"
+      python_version: "3.12"
